@@ -1,0 +1,51 @@
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+label, input {
+  display: block;
+  margin-bottom: 3px;
+
+  padding: 2px;
+}
+
+input:focus {
+  background-color:rgb(146, 217, 219);
+  outline: none;
+  border: solid 0.2px;
+}
+
+button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 2px;
+  background-color:rgb(238, 196, 89);
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+button:hover {
+  background-color:rgb(226, 175, 47) ;
+}
+
+em {
+  font-size: 12px;
+  color: red;
+  max-width: 100px;
+}
+
+form {
+  margin: 15px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.form-div {
+  margin: 5px;
+}

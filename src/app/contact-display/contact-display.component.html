@@ -1,0 +1,46 @@
+<div *ngIf="contactList.length === 0" class="empty-message">
+  <h1>A lista de contatos está vazia</h1>
+</div>
+
+<div
+  *ngFor="let contact of contacList$ | async; let i = index"
+  [contact]= "contact"
+  [index]= "i">
+
+  <em>Nome:
+    <input
+    #nameUpdate
+    [disabled]="!enableInput"
+    [ngClass]="{'show-border-input': enableInput}"
+    type="text"
+    value="{{ contact.name }}">
+  </em>
+  <em>Sobrenome:
+    <input
+    #lastanameUpdate
+    [disabled]="!enableInput"
+    [ngClass]="{'show-border-input': enableInput}"
+    type="text"
+    value="{{ contact.lastname }}">
+  </em>
+  <em>Telefone:
+    <input
+    #phoneUpdate
+    [disabled]="!enableInput"
+    [ngClass]="{'show-border-input': enableInput}"
+    type="phone"
+    value="{{ contact.phone }}">
+  </em>
+
+  <button
+  type="button"
+  class="details-btn"
+  [routerLink]="['/edit', i]"
+  >Detalhes</button>
+
+  <button
+  type="button"
+  class="delete-btn"
+  (click)="onDelete(i)">Excluir</button>
+  <hr>
+</div>

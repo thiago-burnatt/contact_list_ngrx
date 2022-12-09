@@ -1,0 +1,57 @@
+<div class="form-div">
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+    <label for="name">Nome</label>
+    <input type="text" name="name"
+    name="name"
+    ngModel
+    required
+    #name="ngModel">
+    <span *ngIf="!name.valid && name.touched">
+      <em>Por favor digite um valor válido</em>
+    </span>
+
+
+    <label for="lastName">Sobrenome</label>
+    <input type="text" name="lastName"
+    name="lastname"
+    ngModel
+    required
+    #lastname="ngModel">
+    <span *ngIf="!lastname.valid && lastname.touched">
+      <em>Por favor digite um valor válido</em>
+    </span>
+
+    <label for="adress">Endereço</label>
+    <input  type="text" name="adress"
+    name="adress"
+    ngModel
+    required
+    #adress="ngModel">
+    <span *ngIf="!adress.valid && adress.touched">
+      <em>Por favor digite um valor válido</em>
+    </span>
+
+    <label for="phone">Telefone</label>
+    <input type="phone" name="phone"
+    name="phone"
+    ngModel
+    required
+    minlength="8"
+    #phone="ngModel">
+    <span *ngIf="!phone.valid && phone.touched">
+      <em>Mínimo 8 caracteres</em>
+    </span>
+
+    <button
+    [disabled]="!form.valid"
+    [routerLink]="['']"
+    type="submit"
+    >Cadastrar</button>
+
+    <button
+    type="button"
+    (click)="clearFieldsBtn(form)"
+    >Limpar campos</button>
+  </form>
+</div>

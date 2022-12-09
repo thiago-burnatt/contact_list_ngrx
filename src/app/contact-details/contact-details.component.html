@@ -1,0 +1,97 @@
+<div *ngIf="!contact" class="page-not-found">
+
+  <div  class="page-not-found-btn">
+    <h2>Contato não encontrado!</h2>
+  </div>
+
+  <div class="page-not-found-btn">
+    <button
+    [routerLink]="['']"
+    type="button"
+    >Voltar</button>
+  </div>
+
+</div>
+
+<div *ngIf="contact">
+  <form (ngSubmit)="onUpdate(form)" #form="ngForm">
+      <em>Nome:
+        <input
+        [disabled]="!enableInput"
+        [ngClass]="{'show-border-input': enableInput}"
+        type="text"
+        [ngModel]="contact.name"
+        name="name"
+        required
+        #name="ngModel">
+        </em>
+
+
+      <em>Sobrenome:
+        <input
+        [disabled]="!enableInput"
+        [ngClass]="{'show-border-input': enableInput}"
+        type="text"
+        [ngModel]="contact.lastname"
+        name="lastname"
+        required
+        #lastname="ngModel">
+      </em>
+
+      <em>Endereço:
+        <input
+        [disabled]="!enableInput"
+        [ngClass]="{'show-border-input': enableInput}"
+        type="text"
+        [ngModel]="contact.adress"
+        name="adress"
+        required
+        #adress="ngModel">
+      </em>
+
+      <em>Telefone:
+        <input
+        [disabled]="!enableInput"
+        [ngClass]="{'show-border-input': enableInput}"
+        type="phone"
+        [ngModel]="contact.phone"
+        name="phone"
+        required
+        minlength="8"
+        #phone="ngModel">
+      </em>
+
+      <em>Última alteração: {{ contact.createdAt}}</em>
+
+      <button
+      type="button"
+      class="edit-btn"
+      (click)="onEnableInput()"
+      [hidden]="enableInput"
+      >Editar</button>
+
+      <button
+      [disabled]="!form.valid"
+      type="submit"
+      class="save-btn"
+      [hidden]="!enableInput"
+      >Salvar</button>
+
+      <button
+      type="button"
+      class="delete-btn"
+      (click)="onDelete()"
+      >Excluir</button>
+
+      <button
+      type="button"
+      class="back-btn"
+      (click)="onGoBack()"
+      >Voltar</button>
+
+
+  </form>
+
+
+</div>
+

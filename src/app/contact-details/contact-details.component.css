@@ -1,0 +1,68 @@
+em {
+  display: block;
+  width: 100%;
+  padding: 3px;
+}
+
+input {
+  border: none;
+  font-size: 18px;
+  background-color: rgb(223, 250, 241);
+}
+
+input:disabled {
+  background-color: white;
+  color: black;
+  font-size: 18px;
+}
+
+input:focus {
+  outline: none;
+  background-color: rgb(144, 250, 215);
+}
+
+button {
+  margin: 2px;
+  border-radius: 7px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.edit-btn {
+  background-color: rgb(150, 150, 209);
+}
+
+.save-btn {
+  background-color: rgb(106, 236, 106);
+}
+
+.delete-btn {
+  background-color: rgb(238, 102, 102);
+}
+
+.back-btn {
+  background-color: rgb(144, 207, 35);
+}
+
+.page-not-found {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.page-not-found-btn {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 2px;
+  border-radius: 7px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  background-color: coral;
+}
