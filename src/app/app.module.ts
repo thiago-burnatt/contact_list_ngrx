@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
-
 import { AppComponent } from './app.component';
 
 import { FormComponent } from './form/form.component';
@@ -20,8 +19,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
-import { appReducer } from './store/app.state';
 import { ContactListEffectService } from './store/contactList.effects.service';
+import { appReducer } from './store/app.reducers';
 
 
 @NgModule({

@@ -1,9 +1,8 @@
-import { IContact } from './../store/app.state';
 import { map } from 'rxjs';
 import { DataService } from './../services/data.service';
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { IAppState } from '../store/app.state';
+import { IContact, IAppState } from '../store/app.reducers';
 
 @Component({
   selector: 'app-contact-display',

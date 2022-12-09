@@ -1,11 +1,10 @@
-import { IContact } from './../store/app.state';
 import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 import { Store } from '@ngrx/store';
-import { IAppState } from '../store/app.state';
 import { map } from 'rxjs';
+import { IContact, IAppState } from '../store/app.reducers';
 
 @Component({
   selector: 'app-contact-details',

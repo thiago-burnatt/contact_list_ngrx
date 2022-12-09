@@ -1,6 +1,7 @@
-import { IAppState, loadAllContactsAction } from './store/app.state';
 import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
+import { loadAllContactsAction } from './store/app.actions';
+import { IAppState } from './store/app.reducers';
 
 @Component({
   selector: 'app-root',

@@ -1,9 +1,9 @@
-import { IAppState, IContact, createNew, updateContact, IContactIndex, deleteContact, updateContactAction } from './../store/app.state';
 import { map } from "rxjs";
 
 import { Injectable } from "@angular/core";
 import { Store } from '@ngrx/store';
-import { NotificationService } from './notification.service';
+import { createNew, deleteContact, updateContactAction, updateContact } from "../store/app.actions";
+import { IContact, IAppState, IContactIndex } from "../store/app.reducers";
 
 @Injectable()
 export class DataService {
