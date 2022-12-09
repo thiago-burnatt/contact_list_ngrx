@@ -1,4 +1,4 @@
-<div *ngIf="contactList.length === 0" class="empty-message">
+<div *ngIf="(contacList$ | async) < 1" class="empty-message">
   <h1>A lista de contatos está vazia</h1>
 </div>
 

@@ -10,7 +10,6 @@ import { IContact, IAppState } from '../store/app.reducers';
   styleUrls: ['./contact-display.component.css']
 })
 export class ContactDisplayComponent {
-  contactList: IContact[] = [];
 
   constructor(
     private dataService: DataService,
@@ -20,10 +19,7 @@ export class ContactDisplayComponent {
   contacList$ = this.store.select('app')
     .pipe(map(app => app.contacts));
 
-
   ngOnInit() {
-    this.contactList = this.dataService.contactList;
-
   }
 
   onDelete(i: number) {

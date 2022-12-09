@@ -9,7 +9,14 @@ import {
 import { Store } from '@ngrx/store';
 import { switchMap, tap } from 'rxjs';
 import { NotificationService } from '../services/notification.service';
-import { loadAllContactsAction, setContacts, loadContactsSuccess, updateContactAction, updateContactSuccess, createNew, createNewSuccess } from './app.actions';
+import {
+  loadAllContactsAction,
+  setContacts,
+  loadContactsSuccess,
+  updateContactAction,
+  updateContactSuccess,
+  createNew,
+  createNewSuccess } from './app.actions';
 import { IAppState, IContact } from './app.reducers';
 
 @Injectable()
