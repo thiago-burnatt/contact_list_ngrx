@@ -29,6 +29,11 @@ export class ContactListEffectService {
     private store: Store<{ app: IAppState }>
   ) {}
 
+  updateVisitors() {
+    this.http.post('https://amigutiteste-default-rtdb.firebaseio.com/test_visitors.json', {date: new Date})
+    .subscribe(() => {});
+  }
+
   loadAll = createEffect(
     () => this.actions$.pipe(
       ofType(loadAllContactsAction),
